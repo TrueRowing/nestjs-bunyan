@@ -1,5 +1,5 @@
-# `@eropple/nestjs-bunyan` #
-[![npm version](https://badge.fury.io/js/%40eropple%2Fnestjs-bunyan.svg)](https://badge.fury.io/js/%40eropple%2Fnestjs-bunyan)
+# `@hydrow/nestjs-bunyan` #
+[![npm version](https://badge.fury.io/js/%40eropple%2Fnestjs-bunyan.svg)](https://npm.ops.hydrow-internal.net/#/detail/@hydrow/nestjs-bunyan)
 
 This package contains a module to provide Bunyan logging across a NestJS
 application. It supports full request-specific logging by providing a
@@ -7,6 +7,11 @@ request-scoped Bunyan logger in the dependency injector and includes an
 in/out interceptor for recording request data and request timing.
 
 ## Recent Changes ##
+### 0.5.8 ###
+- Added the `req-id` prop to the request-logger output, alongside
+  `correlationId`, with the same value, in keeping with the Bunyan standard,
+  and to avoid a breaking change.
+
 ### 0.5.7 ###
 - Added `postRequestCreate` as a logging option. This allows you to decore
   the request logger with fields (by setting them into `logger.fields`, see
